@@ -1,0 +1,42 @@
+{
+  "name": "al-backend-renewed",
+  "version": "0.0.1",
+  "description": "Ardas Legends Backend Renewed",
+  "scripts": {
+    "watch": "tsc --watch --preserveWatchOutput --pretty",
+    "dev": "cross-env NODE_ENV=development nodemon",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "build": "rimraf dist && tsc",
+    "start": "node dist/index.js",
+    "prisma": "prisma",
+    "prisma:migrate:dev": "prisma migrate dev",
+    "prisma:migrate:prod": "prisma migrate deploy",
+    "prisma:migrate:reset": "prisma migrate reset",
+    "prisma:generate": "prisma generate",
+    "prisma:seed": "ts-node prisma/seed.ts"
+  },
+  "author": "Alexandros Stergiou",
+  "license": "GNU General Public License v3.0",
+  "dependencies": {
+    "@prisma/client": "^5.18.0",
+    "@vinejs/vine": "^2.1.0",
+    "fastify": "^4.28.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.3.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.0.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "fastify-tsconfig": "^2.0.0",
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.3",
+    "prisma": "^4.0.0",
+    "rimraf": "^5.0.7",
+    "ts-node": "^10.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.5.4"
+  }
+}
