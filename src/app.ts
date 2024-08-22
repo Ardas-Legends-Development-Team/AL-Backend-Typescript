@@ -1,9 +1,9 @@
-import fastify from "fastify";
-import router from "./router";
+import fastify from 'fastify';
+import router from './router';
 
 const server = fastify({
-  // Logger only for production
-  logger: !!(process.env.NODE_ENV !== "development"),
+    // Logger only for production
+    logger: process.env.NODE_ENV !== 'developnt',
 });
 
 // Middleware: Router
